@@ -1,0 +1,198 @@
+.timer
+  padding-bottom: 46px
+  &-box
+    display: flex
+    align-items: stretch
+    justify-content: space-between
+  &__item
+    border-radius: 20px
+    flex-basis: 50%
+    border: 1px solid #FFFFFF
+    color: #FFFFFF
+    padding: 20px 0
+    &:first-child
+      display: flex
+      align-items: center
+      margin-right: 18px
+      padding-left: 50px
+    &:last-child
+      display: flex
+      align-items: center
+      justify-content: center
+  &__img
+    margin-top: -12px
+    margin-bottom: -5px
+  &__title
+    max-width: 261px
+    font-size: 16px
+    line-height: 20px
+    color: #FFFFFF
+    margin-left: 19px
+    & span
+      display: block
+      @include font-mulishSB
+  &-time
+    display: flex
+    align-items: center
+    padding-left: 59px
+    & p
+      margin-right: 10px
+      margin-left: 10px
+      @include font-mulishSB
+      font-size: 19px
+      margin-top: -15px
+  &-numberBx
+    display: flex
+    flex-direction: column
+    align-items: center
+    &:first-child
+      position: relative
+    & span
+      color: #FFFFFF
+      &:first-child
+        font-size: 19px
+        @include font-mulishSB
+        background-color: #fff
+        width: 52px
+        height: 40px
+        border-radius: 6px
+        display: flex
+        align-items: center
+        justify-content: center
+        color: #000000
+      &:last-child
+        font-size: 14px
+  &-priceBx
+    display: flex
+    align-items: center
+    margin-right: 25px
+    &:first-child
+      & p:last-child
+        font-size: 19px
+        color: #ffffff
+        @include font-mulishSB
+        padding: 9px 10px
+        background: $--accent-color
+        border-radius: 6px
+        position: relative
+        & span
+          font-size: 14px
+        &:after, &:before
+          content: ''
+          position: absolute
+          border: 2px solid #d935c2
+          opacity: 0
+          left: -20px
+          right: -20px
+          top: -20px
+          bottom: -20px
+          border-radius: 6px
+          animation: pulse 2.5s linear infinite
+        &:before
+          animation-delay: 3s
+    &:last-child
+      margin-right: 0
+      & p:last-child
+        padding: 9px 10px
+        background-color: #fff
+        border-radius: 6px
+        font-size: 19px
+        @include font-mulishSB
+        position: relative
+        color: #000000
+        &:after
+          content: ''
+          position: absolute
+          left: 50%
+          top: 50%
+          transform: translateX(-50%) rotate(-20deg)
+          width: calc(100% + 25px)
+          height: 2px
+          background-color: $--accent-color
+    & p:first-child
+      font-size: 16px
+      @include font-mulishSB
+      color: #FFFFFF
+      margin-right: 25px
+@keyframes pulse
+  0%
+    transform: scale(0.5)
+    opacity: 0
+  50%
+    opacity: 1
+  100%
+    transform: scale(1.07)
+    opacity: 0
+    border-radius: 43%
+@media (max-width: 1280px)
+  .timer
+    &-time
+      padding-left: 10px
+//display: none
+@media (max-width: 1080px)
+  .timer
+    padding-top: 0
+    padding-bottom: 20px
+    &-box
+      flex-direction: column
+      border-radius: 20px
+    &__item
+      margin-right: 0
+      flex-basis: 100%
+      padding-top: 30px
+      &:first-child
+        flex-direction: column
+        align-items: center
+        border-radius: 20px
+        padding-bottom: 25px
+        background: linear-gradient(207.56deg, #F9FAFB 0%, #F2F9FF 100%)
+        margin-right: 0
+        position: relative
+        z-index: 3
+      &:last-child
+        flex-direction: column
+        align-items: flex-start
+        padding-left: 42px
+        padding-bottom: 30px
+        padding-top: 35px
+        background: none
+        background-color: #fff !important
+        border: 1px solid rgba(0, 0, 0, 0.05)
+        border-radius: 0 0 20px 20px
+        position: relative
+        z-index: 2
+        margin-top: -20px
+        //display: none
+    &__img
+      transform: rotate(20deg)
+      margin-top: -10px
+      margin-bottom: -15px
+    &__title
+      margin-top: 0
+      text-align: center
+      font-size: 16px
+      margin-left: 0
+      color: #000000
+      & span
+        @include font-mulishSB
+    &-time
+      padding-left: 0
+      padding-top: 18px
+    &-numberBx
+      & span
+        color: #000000
+      & span:first-child
+        width: 50px
+        height: 40px
+        font-size: 18px
+    &-priceBx
+      & p:first-child
+        margin-right: 20px
+        font-size: 16px
+        line-height: 20px
+        color: #000000
+      &:last-child
+        & p:last-child
+          box-shadow: 0px 0px 25px rgba(223, 223, 223, 0.6)
+
+

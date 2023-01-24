@@ -1,0 +1,72 @@
+.structure
+  padding-top: 100px
+  padding-bottom: 100px
+  background: linear-gradient(90deg, #1c091a, #261221)
+  color: #FFFFFF
+  &-inner
+    display: flex
+    align-items: center
+    justify-content: center
+  &-productBx
+    padding: 0 80px
+    position: relative
+    & img
+      max-width: 250px
+    &.mobile
+      display: none
+  &-button
+    margin-top: 15px
+  &__item
+    display: flex
+    align-items: center
+    margin-bottom: 130px
+    &:last-child
+      margin-bottom: 0
+    &-desc
+      font-size: 20px
+      @include font-mulishSB
+      margin-left: 15px
+  &-imgBx
+    width: 70px
+    height: 70px
+    border-radius: 50%
+    background-color: #eee
+    & img
+      width: 100%
+      height: 100%
+      border-radius: 50%
+@media (max-width: 1080px)
+  .structure
+    &-productBx
+      padding: 0 30px
+    &__item
+      &-desc
+        font-size: 18px
+@media (max-width: 480px)
+  .structure
+    padding-top: 50px
+    &-inner
+      flex-direction: column
+      align-items: flex-start
+    &-box
+      flex-direction: column
+      &:first-child
+        padding-bottom: 30px
+      &:last-child
+        padding-top: 30px
+    &-productBx
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: center
+      padding: 0
+      width: 100%
+      & img
+        max-width: 200px
+    &__item
+      margin-bottom: 20px
+      &-desc
+        font-size: 18px
+    &-imgBx
+      width: 60px
+      height: 60px
